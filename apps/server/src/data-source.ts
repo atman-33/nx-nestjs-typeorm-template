@@ -29,7 +29,7 @@ export const dataSourceOptions: DataSourceOptions = {
     * Entity file for generating migration files.
     * Note: Referencing ts files will cause an error as they are not modules, so specify the transpiled js.
    */
-  migrations: ['dist/server/migrations/*.js'],
+  migrations: ['apps/server/src/app/migrations/*.ts'],
 };
 
 const dataSource = new DataSource(dataSourceOptions);

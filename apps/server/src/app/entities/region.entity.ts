@@ -1,10 +1,15 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
-@Entity({name: "regions"})
+/* Note: The table names of Oracle are Upper. */
+
+@Entity({name: "REGIONS"})
 export class Region{
-    @PrimaryColumn({name: "region_id"})
+    @PrimaryColumn({name: "REGION_ID"})
     regionId: number
 
-    @Column({name: "region_name"})
+    @Column({name: "REGION_NAME"})
     regionName: string
+
+    @Column({name: "NOTE"})
+    note: string
 }
