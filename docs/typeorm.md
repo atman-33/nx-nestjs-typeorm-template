@@ -71,3 +71,27 @@ npx ts-node -r tsconfig-paths/register -P tsconfig.typeorm.json ./node_modules/t
 ```
 npx ts-node -r tsconfig-paths/register -P tsconfig.typeorm.json ./node_modules/typeorm/cli.js migration:run -d apps/server/src/data-source.ts
 ```
+
+## output models form database
+
+*1. install typeorm-model-generator*
+```
+ npm install --save-dev typeorm-model-generator 
+```
+> if you use oracledb, instatll oracledb.
+```
+npm install oracledb
+```
+
+*2. run generate models*
+
+first case => when not exist .tomg-config 
+```
+npx ts-node ./node_modules/typeorm-model-generator/bin/typeorm-model-generator
+```
+> you can select any questions. after that, created .tomg-config.
+
+if .tomg-donfig exists then you can use below command.
+```
+npx ts-node ./node_modules/typeorm-model-generator/bin/typeorm-model-generator -h
+```
