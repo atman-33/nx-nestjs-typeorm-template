@@ -6,6 +6,8 @@ import * as Joi from 'joi';
 import { dataSourceOptions } from '../data-source';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AuthModule } from './auth/auth.module';
+import { ItemsModule } from './items/items.module';
 import { RegionsModule } from './regions/regions.module';
 
 @Module({
@@ -23,6 +25,8 @@ import { RegionsModule } from './regions/regions.module';
       }),
     }),
     TypeOrmModule.forRoot(dataSourceOptions),
+    ItemsModule,
+    AuthModule,
     RegionsModule],
   controllers: [AppController],
   providers: [AppService],

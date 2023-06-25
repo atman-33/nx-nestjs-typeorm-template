@@ -72,6 +72,8 @@ npx ts-node -r tsconfig-paths/register -P tsconfig.typeorm.json ./node_modules/t
 npx ts-node -r tsconfig-paths/register -P tsconfig.typeorm.json ./node_modules/typeorm/cli.js migration:run -d apps/server/src/data-source.ts
 ```
 
+> import module error in migration files happend when nx serve, comment out migration file.
+
 ## output models form database
 
 *1. install typeorm-model-generator*

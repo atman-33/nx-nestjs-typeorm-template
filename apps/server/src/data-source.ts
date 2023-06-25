@@ -1,6 +1,8 @@
 import { env } from '@libs/shared/config';
 import { DataSource, DataSourceOptions } from 'typeorm';
+import { Item } from './app/entities/item.entity';
 import { Region } from './app/entities/region.entity';
+import { User } from './app/entities/user.entity';
 
 export const dataSourceOptions: DataSourceOptions = {
   /* postgres ver */
@@ -23,7 +25,7 @@ export const dataSourceOptions: DataSourceOptions = {
    * File for generating migration files and setting metadata for entities.
    * Note: Referencing *.entity.ts/js files will cause an error, so specify the class.
    */
-  entities: [Region],
+  entities: [User, Item, Region],
 
   /**
     * Entity file for generating migration files.
